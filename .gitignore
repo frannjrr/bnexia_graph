@@ -1,0 +1,34 @@
+# Byte-compiled
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Virtual Environment
+venv/
+.env
+.venv
+
+# IDE
+.vscode/
+.idea/
+
+# Sema4.ai / Robocorp
+.sema4ai/
+*.lock
+
+# Data & Generated Files
+*.db
+graphify-out/
+corpus/
+server_log.txt
+venv/
+__pycache__/
+.sema4ai/
+*.db
+.env
+graphify-out/graph.json

@@ -1,0 +1,28 @@
+spec-version: v2
+name: bnexia-actions
+version: 0.1.0
+description: Bnexia actions – tools personalizadas para nuestros agentes IA
+
+dependencies:
+  conda-forge:
+    - python=3.12
+    - pip
+  pypi:
+    - sema4ai-actions>=1.0.0,<2.0.0
+    - httpx>=0.27.0,<1.0.0
+    # Añade aquí el resto de paquetes que necesites para tus actions
+    # - pandas
+    # - langchain
+    # - pillow
+    # etc.
+
+pythonpath:
+  - .
+
+packaging:
+  exclude:
+    - __pycache__/
+    - "*.pyc"
+    - .git/
+    - "*.bak"
+    - venv/
