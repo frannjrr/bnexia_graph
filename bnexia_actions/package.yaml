@@ -1,7 +1,9 @@
 spec-version: v2
 name: bnexia-actions
-version: 0.1.0
-description: Bnexia actions – tools personalizadas para nuestros agentes IA
+version: 0.2.0
+description: >
+  Bnexia Graph Tools — MCP actions para diagnosis, blast_radius y construcción
+  determinista de grafos operativos desde n8n workflows.
 
 dependencies:
   conda-forge:
@@ -10,14 +12,13 @@ dependencies:
   pypi:
     - sema4ai-actions>=1.0.0,<2.0.0
     - httpx>=0.27.0,<1.0.0
-    # Añade aquí el resto de paquetes que necesites para tus actions
-    # - pandas
-    # - langchain
-    # - pillow
-    # etc.
+    - networkx>=3.1
+    - fastapi>=0.105.0
+    - uvicorn>=0.25.0
 
 pythonpath:
   - .
+  - ..  # Para importar graphify_n8n_standalone desde el directorio padre
 
 packaging:
   exclude:
@@ -26,3 +27,5 @@ packaging:
     - .git/
     - "*.bak"
     - venv/
+    - graphify-out/
+    - corpus/
